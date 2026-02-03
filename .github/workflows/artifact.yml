@@ -23,11 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v4
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: hello.txt
 
-    - name: Copy file
-      run: |
-        cp hello.txt ./artifacts
-        cat ./artifacts/hello.txt
+    - name: print file
+      run: cat ./artifacts/hello.txt
       
+
