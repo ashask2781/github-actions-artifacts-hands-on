@@ -31,8 +31,9 @@ jobs:
     - name: print file
       run: |
         ls -a
-        cat ./artifacts/hello.txt
+        cat hello.txt
       
+
 
 
 
